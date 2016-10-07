@@ -5,13 +5,13 @@ using namespace std;
 
 
 
-bool dead(name, yn) {
+string dead(string name, string yn) {
 string retrn;
   if(yn == ("yes")) {
     retrn = (name + " is dead inside");
     return retrn;
   }
-else if(yn == no) {
+else if(yn == ("no")) {
   retrn = (name + " is not dead inside");
   return retrn;
 }
@@ -21,8 +21,9 @@ else if(yn == no) {
 int main() {
   string name;
   string yn;
-  cin << name;
-  cout >> name >> ", are you dead inside (yes or no)";
-  cin << yn;
-  cout >> dead(name, yn);
+  cout << "what is you name?" << endl;
+  cin >> name;
+  cout << name << ", are you dead inside (yes or no)" << endl;
+  cin >> yn;
+  cout << dead(name, yn);
 }
